@@ -1,0 +1,19 @@
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/header/header__icon.css);
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__picture/profile__picture.css);
+@import url(../blocks/profile/__name/profile__name.css);
+@import url(../blocks/profile/about/profile__about.css);
+@import url(../blocks/profile/__buttons/profile__buttons.css);
+
+
+@import url(../blocks/cards/cards.css);
+@import url(../blocks/cards/__image/card__image.css);
+@import url(../blocks/cards/__rectangle/card__rectangle.css);
+@import url(../blocks/cards/__place/card__place.css);
+@import url(../blocks/cards/__like-button/card__like-button.css);
+
+
+@import url(../blocks/footer/footer.css);

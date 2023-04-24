@@ -1,0 +1,9 @@
+.profile{
+    display: flex;
+}
+
+@media screen and (max-width:320px){
+    .profile {
+        max-width: 320px;
+}
+}

@@ -1,0 +1,29 @@
+.edit__button{
+    width: 24px;
+    position: relative;
+    right: 230px;
+}
+
+.edit__button:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.add__button{
+    width: 150px;
+    position: relative;
+    right: 50px;
+}
+
+.add__button:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:320px){
+    .add__button{
+        position: relative;
+        right: 280px;
+        top: 350px;
+    }
+}

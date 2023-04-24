@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Around US</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <img src="./images/site__icon.png" alt="ícone do site 'Around US'" class="header__icon">
+        <img src="./images/Line.png" alt="" class="header__line">
+    </header>
+
+    <main>
+
+        <section class="popup">
+            <form class="popup__container">
+                <img src="./images/close__icon.png" alt="" class="input__close__icon">
+                <h2 class="input__title">Editar perfil</h2>
+                <div class="input__info">
+                    <input type="text" placeholder="Seu nome" name="name" class="input__info_text" id="input-name" required>
+                    <img src="./images/Line.png" alt="" class="input__line">
+                </div>
+                <div class="input__info">
+                    <input type="text" placeholder="Sobre mim" name="description" class="input__info_text" id="input-description" required>
+                    <img src="./images/Line.png" alt="" class="input__line">
+                </div>
+                <input type="button" value="Salvar" class="input__save__button">
+            </form>
+        </section>
+
+        <section class="profile">
+                <img src="./images/profile_pic.jpg" alt="" class="profile__picture">
+                <h1 class="profile__name">Jacques Cousteau</h1>
+                <p class="profile__about">Explorer</p>                 
+        <div>
+            <img src="./images/edit_button.png" alt="" class="edit__button">
+            <img src="./images/add_button.png" alt="" class="add__button">
+        </div>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+            <img src="./images/vale_de_yosemite.jpg" alt="" class="card__image">
+            <div class="card__rectangle">
+                <p class="card__place">Vale de Yosemite</p>
+                <img src="./images/like-button.png" alt="" class="like__button">
+            </div>
+            </div>
+
+            <div class="card">
+            <img src="./images/lago_louise.png" alt="" class="card__image">
+            <div class="card__rectangle">
+                <p class="card__place">Lago Louise</p>
+                <img src="./images/like-button.png" alt="" class="like__button">
+            </div>
+            </div>
+
+            <div class="card">
+            <img src="./images/montanhas.png" alt="" class="card__image">
+            <div class="card__rectangle">
+                <p class="card__place">Montanhas care...</p>
+                <img src="./images/like-button.png" alt="" class="like__button">
+            </div>
+            </div>
+
+            <div class="card">
+            <img src="./images/latemar.png" alt="" class="card__image">
+            <div class="card__rectangle">
+                <p class="card__place">Latemar</p>
+                <img src="./images/like-button.png" alt="" class="like__button">
+            </div>
+            </div>
+
+            <div class="card">
+            <img src="./images/vanoise.png" alt="" class="card__image">
+            <div class="card__rectangle">
+                <p class="card__place">Vanoise Nationa...</p>
+                <img src="./images/like-button.png" alt="" class="like__button">
+                
+            </div>
+            </div>
+
+            <div class="card">
+            <img src="./images/lago_di_braies.png" alt="" class="card__image">
+            <div class="card__rectangle">
+                <p class="card__place">Lago de Braies</p>
+                <img src="./images/like-button.png" alt="" class="like__button">
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="footer"> &copy; 2021 Around the world</p>
+    </footer>
+    <script src="./script/script.js"></script>
+</body>
+</html>
