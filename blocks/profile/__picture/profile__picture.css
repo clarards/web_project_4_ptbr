@@ -2,14 +2,6 @@
     position: relative;
     left: 177px;
     width: 168px;
-    border-radius: 150px;
+    border-radius: 50%;
 }
 
-@media screen and (max-width: 320px){
-    .profile__picture{
-        position: relative;
-        left: 80px;
-        top: 50px;
-
-    }
-}

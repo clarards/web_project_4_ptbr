@@ -1,0 +1,21 @@
+
+
+.input__info{
+    margin: 30px 36px 54px 20px;
+}
+
+.input__about_text{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+.input__name_text{
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+.input__line{
+    max-width: 358px;
+}

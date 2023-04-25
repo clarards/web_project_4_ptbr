@@ -1,9 +1,14 @@
 .profile{
     display: flex;
+    column-gap: 10px;
+    padding-left: 20px;
 }
 
-@media screen and (max-width:320px){
-    .profile {
-        max-width: 320px;
+.profile__person{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-}
+
+
+

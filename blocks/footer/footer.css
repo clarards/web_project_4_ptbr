@@ -3,3 +3,10 @@
     color: #545454;
     margin: 12.5rem 37.5rem 3.75rem 12.5rem;
 }
+
+@media screen and (max-width: 320px){
+    .footer{
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+}

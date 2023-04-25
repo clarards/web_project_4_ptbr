@@ -1,8 +1,12 @@
 .profile__about{
+    display: flex;
+    column-gap: 10px;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
-    right: 160px;
-    top: 50px;
-    width: 415px;
+    right: 150px;
+    width: 300px;
     font-size: 18px;
     font-weight: 400;
 }
+
