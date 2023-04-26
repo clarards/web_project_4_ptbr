@@ -1,11 +1,11 @@
-.input__close__icon{
+.input__close__button{
     width: 20px;
     position: absolute;
-    right: 450px;
-    bottom: 450px;
+    left: 440px;
+    bottom: 350px;
 }
 
-.input__close__icon:hover{
+.input__close__button:hover{
     opacity: 50%;
     cursor: pointer;
 }
