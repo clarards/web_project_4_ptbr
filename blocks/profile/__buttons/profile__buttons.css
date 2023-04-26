@@ -20,3 +20,18 @@
     cursor: pointer;
 }
 
+@media screen and (max-width:320px){
+    .add__button{
+        position: relative;
+        left: -380px;
+        top: 300px;
+    }
+
+    .edit__button{
+        position: relative;
+        left: -200px;
+        top: 220px;
+
+    }
+}
+

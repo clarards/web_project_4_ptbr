@@ -10,3 +10,12 @@
     font-weight: 400;
 }
 
+@media  screen and (max-width:320px) {
+    .profile__about{
+        position: relative;
+        left: -270px;
+        top: 200px;
+        font-size: 14px;
+    }
+    
+}

@@ -5,3 +5,11 @@
     border-radius: 50%;
 }
 
+@media screen and (max-width: 320px){
+    .profile__picture{
+        position: relative;
+        top: 30px;
+        left: 60px;
+    }
+    
+}
