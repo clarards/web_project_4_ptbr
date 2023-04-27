@@ -7,21 +7,28 @@ const inputAbout = document.querySelector('#input-about');
 const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__about');
 
-edit.addEventListener('click', () => {
-    userInfo.setAttribute ('style' , 'display:block')
-});
+function openPopup(){
+    userInfo.classList.add('popup__container-active');
+}
 
-closeButton.addEventListener('click', () => {
-    userInfo.setAttribute ('style', 'display:none');
-});
+function closePopup(){
+    userInfo.classList.remove('popup__container-active')
+}
 
+edit.addEventListener('click', openPopup);
+closeButton.addEventListener('click', closePopup);
 
-function handleProfileFormSubmit(evt){
+function saveUserInfo(evt){
     evt.preventDefault();
 
     userName.textContent = inputName.value;
     userAbout.textContent = inputAbout.value;
 
+    closePopup();
+
 }
 
-saveButton.addEventListener('click', handleProfileFormSubmit);
+saveButton.addEventListener('click', saveUserInfo);
+
+
+
