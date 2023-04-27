@@ -1,0 +1,11 @@
+.header__icon{
+    width: 10.8rem;
+    margin: 2.8rem 56rem 2.5rem 12.5rem;
+}
+
+@media screen and (max-width:320px){
+    .header__icon{
+        margin-left: 27px;
+    }
+
+}

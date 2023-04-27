@@ -1,14 +1,3 @@
-.edit__button{
-    width: 24px;
-    position: relative;
-    right: 100px;
-}
-
-.edit__button:hover{
-    opacity: 50%;
-    cursor: pointer;
-}
-
 .add__button{
     width: 150px;
     position: relative;
@@ -26,12 +15,4 @@
         left: -380px;
         top: 300px;
     }
-
-    .edit__button{
-        position: relative;
-        left: -200px;
-        top: 220px;
-
-    }
 }
-
