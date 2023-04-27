@@ -2,8 +2,11 @@
     margin: 0 auto;
     display: none ;
     height: 330px;
+    z-index: 1;
 }
 
 .popup__container-active{
     display: block;
+    z-index: 1;
+    
 }
