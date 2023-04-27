@@ -2,24 +2,6 @@
     margin: 30px 36px 30px 20px;
 }
 
-.input__about_text{
-    background-color: transparent;
-    border: none;
-    text-align: center;
-}
 
-.input__name_text{
-    background-color: transparent;
-    border: none;
-    text-align: center;
-}
 
-.input__line{
-    max-width: 358px;
-}
 
-@media screen and (max-width: 320px){
-    .input__line{
-        width: 230px;
-    }
-}

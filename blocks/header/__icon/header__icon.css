@@ -1,11 +1,19 @@
 .header__icon{
+    display: flex;
+    justify-content: flex-start;
     width: 10.8rem;
     margin: 2.8rem 56rem 2.5rem 12.5rem;
 }
 
+@media screen and (max-width: 768px){
+    .header__icon{
+        margin-left: 60px;
+    }
+}
 @media screen and (max-width:320px){
     .header__icon{
         margin-left: 27px;
     }
 
 }
+

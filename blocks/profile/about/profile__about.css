@@ -10,6 +10,14 @@
     font-weight: 400;
 }
 
+@media screen and (max-width:768px){
+    .profile__about{
+        display: flex;
+        right: 180px;
+        
+    }
+}
+
 @media  screen and (max-width:320px) {
     .profile__about{
         position: relative;

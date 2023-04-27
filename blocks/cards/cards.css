@@ -12,6 +12,16 @@
     width: 282px;
     margin-bottom: 100px;
 }
+@media screen and (max-width: 768px){
+    .cards{
+        width: 300px;
+        margin-left: 70px;
+        grid-template-columns: repeat(2, 282px);
+        grid-template-rows: repeat(3, 381px);
+        grid-gap: 50px;
+        row-gap: 10px;
+    }
+}
 
 @media screen and (max-width: 320px){
     .cards{
@@ -22,4 +32,6 @@
         grid-template-rows: repeat(6, 361px);
         grid-gap: 20px;
     }
+
 }
+

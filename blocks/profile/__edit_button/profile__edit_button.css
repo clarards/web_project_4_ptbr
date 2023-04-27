@@ -9,6 +9,13 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px){
+    .edit__button{
+        position: relative;
+        top: 35px;
+        right: 30px;
+    }
+}
 @media screen and (max-width:320px){
     .edit__button{
         position: relative;
