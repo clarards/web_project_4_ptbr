@@ -1,10 +1,7 @@
 .profile__about{
-    display: flex;
-    column-gap: 10px;
-    flex-direction: column;
-    justify-content: center;
     position: relative;
     right: 150px;
+    top: 50px;
     width: 300px;
     font-size: 18px;
     font-weight: 400;
@@ -14,7 +11,7 @@
     .profile__about{
         display: flex;
         right: 180px;
-        
+   
     }
 }
 

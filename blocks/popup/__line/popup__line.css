@@ -1,9 +1,0 @@
-.input__line{
-    max-width: 358px;
-}
-
-@media screen and (max-width: 320px){
-    .input__line{
-        width: 230px;
-    }
-}
