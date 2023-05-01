@@ -5,6 +5,11 @@
     margin: 2.8rem 56rem 2.5rem 12.5rem;
 }
 
+@media screen and (max-width: 868px){
+    .header__icon{
+        margin-left: 80px;
+    }
+}
 @media screen and (max-width: 768px){
     .header__icon{
         margin-left: 60px;

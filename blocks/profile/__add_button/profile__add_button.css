@@ -9,6 +9,13 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 868px){
+    .add__button{
+        position: absolute;
+        top: 270px;
+        right: 350px;
+    }
+}
 @media screen and (max-width: 768px){
     .add__button{
         position: relative;
@@ -17,10 +24,18 @@
     }
 }
 
+@media screen and (max-width: 550px){
+    .add__button{
+        position: relative;
+        right: 300px;
+
+    }
+}
+
 @media screen and (max-width:320px){
     .add__button{
         position: relative;
-        left: -380px;
+        left: -300px;
         top: 300px;
     }
 }

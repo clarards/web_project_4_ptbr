@@ -8,11 +8,9 @@
     font-weight: 400;
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 868px){
     .profile__about{
-        display: flex;
-        
-       
+        right: 200px;
     }
 }
 @media screen and (max-width:768px){
@@ -22,11 +20,18 @@
     }
 }
 
+@media screen and (max-width: 550px){
+    .profile__about{
+        position: absolute;
+        left: 250px;
+    }
+}
+
 @media  screen and (max-width:320px) {
     .profile__about{
-        position: relative;
-        left: -270px;
-        top: 250px;
+        position: absolute;
+        left: 150px;
+        top: 420px;
         font-size: 14px;
     }
     
