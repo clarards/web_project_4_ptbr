@@ -1,7 +1,7 @@
 .add__button{
     width: 150px;
-    position: relative;
-    right: 5px;
+    position: absolute;
+    right: 220px;
 }
 
 .add__button:hover{
@@ -13,7 +13,7 @@
     .add__button{
         position: relative;
         top: 100px;
-        right: 300px;
+        right: 250px;
     }
 }
 

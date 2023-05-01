@@ -1,17 +1,24 @@
 .profile__about{
-    position: relative;
-    right: 150px;
-    top: 50px;
+    display: flex;
+    position: absolute;
+    left: 400px;
+    top: 210px;
     width: 300px;
     font-size: 18px;
     font-weight: 400;
 }
 
+@media screen and (max-width: 550px){
+    .profile__about{
+        display: flex;
+        
+       
+    }
+}
 @media screen and (max-width:768px){
     .profile__about{
         display: flex;
         right: 180px;
-   
     }
 }
 

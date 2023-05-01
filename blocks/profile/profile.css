@@ -2,8 +2,6 @@
     display: flex;
     column-gap: 10px;
     padding-left: 20px;
+    z-index: 1;
 }
-
-
-
 

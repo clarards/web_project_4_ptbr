@@ -2,10 +2,13 @@
     margin: 0 auto;
     display: none;
     height: 330px;
-   
+    z-index: 1;
+    background-color: #fff;
+    color: #000;
+    border-radius: 15px;
 }
 
 .popup__container-active{
     display: block;
-      
+    z-index: 1;  
 }

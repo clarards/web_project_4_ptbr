@@ -7,12 +7,14 @@ const inputAbout = document.querySelector('#input-about');
 const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__about');
 
+
 function openPopup(){
     userInfo.classList.add('popup__container-active');
+
 }
 
 function closePopup(){
-    userInfo.classList.remove('popup__container-active')
+    userInfo.classList.remove('popup__container-active');
 }
 
 edit.addEventListener('click', openPopup);

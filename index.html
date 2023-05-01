@@ -17,11 +17,10 @@
 
     <main>
 
-        <section class="popup">
+     <!---<section class="popup">
             <form class="popup__container">
+                <div class="popup__overlay"></div>
                 <div class="popup__container-active">
-                    <div class="popup__overlay"></div>
-
                 <img src="./images/close__icon.png" alt="Botão de fechar" class="input__close__button">
                 <h2 class="input__title">Editar perfil</h2>
                 <div class="input__info">
@@ -32,7 +31,7 @@
                 </div>
                 <input type="button" value="Salvar" class="input__save__button">
             </form></div>
-        </section>
+        </section>-->
 
         <section class="profile">
             <img src="./images/profile_pic.jpg" alt="Foto de perfil do usuário" class="profile__picture">
@@ -43,6 +42,23 @@
         <div>
             <img src="./images/edit_button.png" alt="Botão de editar" class="edit__button">
             <img src="./images/add_button.png" alt="Botão de adicionar" class="add__button">
+        </div>
+
+        <div class="popup">
+            <img src="./images/close__icon.png" alt="Botão de fechar" class="input__close__button">
+            <form class="popup__container">
+                <div class="popup__container-active">
+                <div class="popup__overlay"></div>
+                </div>
+                <h2 class="input__title">Editar perfil</h2>
+                <div class="input__info">
+                    <input type="text" placeholder="Seu nome" value= '' name="name" class="input__name_text" id="input-name" required>
+                </div>
+                <div class="input__info">
+                    <input type="text" placeholder="Sobre mim" value= '' name="description" class="input__about_text" id="input-about" required>
+                </div>
+                <input type="button" value="Salvar" class="input__save__button">
+            </form>
         </div>
         </section>
 
