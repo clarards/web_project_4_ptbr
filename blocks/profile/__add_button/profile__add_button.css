@@ -24,10 +24,19 @@
     }
 }
 
+@media screen and (min-width: 870px) and (max-width: 1279px){
+    .add__button{
+        position: relative;
+        top: 150px;
+       
+    }
+}
+
 @media screen and (max-width: 550px){
     .add__button{
         position: relative;
-        right: 300px;
+        top: 350px;
+        right: 550px;
 
     }
 }
@@ -35,7 +44,7 @@
 @media screen and (max-width:320px){
     .add__button{
         position: relative;
-        left: -300px;
-        top: 300px;
+        left: -310px;
+        top: 350px;
     }
 }

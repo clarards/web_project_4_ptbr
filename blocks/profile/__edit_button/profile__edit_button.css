@@ -26,18 +26,27 @@
     }
 }
 
+@media screen and (min-width: 870px) and (max-width: 1279px){
+    .edit__button{
+        position: relative;
+        top: 5px;
+    }
+}
+
+
 @media screen and (max-width: 550px){
     .edit__button{
         position: relative;
-        left: -100px;
-        top: 50px;
+        top: 280px;
+        left: -280px;
     }
 }
+
 @media screen and (max-width:320px){
     .edit__button{
         position: relative;
         left: -120px;
-        top: 250px;
+        top: 300px;
 
     }
 }
