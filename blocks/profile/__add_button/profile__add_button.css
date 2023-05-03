@@ -1,7 +1,7 @@
 .add__button{
     width: 150px;
-    position: absolute;
-    right: 220px;
+    margin-bottom: 50px;
+ 
 }
 
 .add__button:hover{
@@ -9,6 +9,7 @@
     cursor: pointer;
 }
 
+/*
 @media screen and (max-width: 868px){
     .add__button{
         position: absolute;
@@ -47,4 +48,4 @@
         left: -310px;
         top: 350px;
     }
-}
+}*/

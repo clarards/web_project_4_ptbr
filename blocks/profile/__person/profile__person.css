@@ -1,6 +1,6 @@
 .profile__person{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: baseline;
+    gap: 25px;
 }
 

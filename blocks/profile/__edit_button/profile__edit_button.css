@@ -1,8 +1,6 @@
 .edit__button{
     width: 24px;
-    position: relative;
-    left: 200px;
-    top: 20px;
+
 }
 
 .edit__button:hover{
@@ -10,6 +8,7 @@
     cursor: pointer;
 }
 
+/*
 @media screen and (max-width: 868px){
     .edit__button{
         position: relative;
@@ -49,4 +48,4 @@
         top: 300px;
 
     }
-}
+}*/

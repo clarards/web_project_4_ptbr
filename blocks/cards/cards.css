@@ -1,19 +1,25 @@
 .cards{
-    width: 880px;
-    margin: 71px 200px 67px;
-    display: grid;
-    grid-template-columns: repeat(3, 282px);
-    grid-template-rows: repeat(2, 282px);
-    grid-gap: 17px;
-    row-gap: 100px;
-    
+   width: 880px;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
 }
 .card{
-    width: 282px;
-    margin-bottom: 100px;
+  width: 282px;
+  margin-bottom: 20px;
 }
 
+@media screen and (max-width: 890px){
+    .cards{
+        width: 90%;
+        max-width: 700px;
+        justify-content: space-around;
+        margin: 0 auto;
+        
+    }
+}
 
+/*
 @media screen and (max-width: 868px){
     .cards{
         width: 300px ;
@@ -66,3 +72,4 @@
 
 }
 
+*/

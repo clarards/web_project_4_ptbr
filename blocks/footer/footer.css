@@ -1,9 +1,11 @@
 .footer{
-    width: 19.8rem;
+    max-width: 880px;
     color: #545454;
-    margin: 12.5rem 37.5rem 3.75rem 12.5rem;
+    margin-top: 50px;
+    margin-left: 20px;
 }
 
+/*
 @media screen and (max-width: 868px){
     .footer{
         margin-top: 30px;
@@ -27,4 +29,4 @@
         margin-left: 20px;
         margin-top: 20px;
     }
-}
+}*/

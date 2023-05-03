@@ -1,13 +1,12 @@
 .profile__about{
-    display: flex;
-    position: absolute;
-    left: 400px;
-    top: 210px;
     width: 300px;
     font-size: 18px;
     font-weight: 400;
+    line-height: 1.5;
+    margin-top: 10px;
 }
 
+/*
 @media screen and (max-width: 868px){
     .profile__about{
         right: 200px;
@@ -37,3 +36,4 @@
     }
     
 }
+*/

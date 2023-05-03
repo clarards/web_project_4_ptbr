@@ -1,10 +1,14 @@
 .header__icon{
-    display: flex;
-    justify-content: flex-start;
-    width: 10.8rem;
-    margin: 2.8rem 56rem 2.5rem 12.5rem;
+    width: 173px;
+    margin-bottom: 40px;
 }
 
+@media screen and (max-width: 890px){
+    .header__icon{
+        margin-left: 30px;
+    }
+}
+/*
 @media screen and (max-width: 868px){
     .header__icon{
         margin-left: 80px;
@@ -20,5 +24,5 @@
         margin-left: 27px;
     }
 
-}
+}*/
 

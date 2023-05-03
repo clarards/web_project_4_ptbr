@@ -1,11 +1,11 @@
 .card__rectangle {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
     width: 282px;
     position: relative;
     bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    display: flex; 
     align-items: center;
-    border-radius: 0 0 10px 10px;
-    background-color: #fff;
+    flex-direction: row;
+    justify-content: space-between;
 }
