@@ -10,5 +10,3 @@
 **Sobre o projeto**
 
 Esse projeto é uma página de rede social para publicação de fotos. No momento, a página tem o recurso de adicionar o nome do usuário e uma pequena descrição sobre ele.
-
-A página é responsiva para eletrônicos de 1280px, 868px, 768px 550px e 320px.

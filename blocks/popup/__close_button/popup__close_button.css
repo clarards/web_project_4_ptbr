@@ -10,6 +10,13 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 540px){
+    .input__close__button{
+        position: absolute;
+        left: 400px;
+    }
+}
+
 @media screen and (max-width:320px){
     .input__close__button{
         position: absolute;

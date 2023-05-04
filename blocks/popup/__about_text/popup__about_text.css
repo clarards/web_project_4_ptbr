@@ -7,6 +7,11 @@
     width: 370px;
 }
 
+@media screen and (max-width: 540px){
+    .input__about_text{
+        width: 360px;
+    }
+}
 @media screen and (max-width: 320px){
     .input__about_text{
         width: 240px;
