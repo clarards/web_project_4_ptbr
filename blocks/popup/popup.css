@@ -8,12 +8,6 @@
     top: 150px;
 }
 
-@media screen and (max-width: 550px){
-    .popup{
-        position: fixed;
-        left: -50px;
-    }
-}
 
 @media screen and (max-width: 320px){
     .popup{

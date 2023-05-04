@@ -3,3 +3,18 @@
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width: 670px){
+    .profile__flex{
+        width: 90%;
+        margin: 0 0 30px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .profile__flex{
+        width: 85%;
+        margin: 0 auto;
+    }
+}

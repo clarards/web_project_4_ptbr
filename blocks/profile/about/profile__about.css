@@ -6,26 +6,22 @@
     margin-top: 10px;
 }
 
-/*
-@media screen and (max-width: 868px){
+@media screen and (max-width: 670px){
     .profile__about{
-        right: 200px;
-    }
-}
-@media screen and (max-width:768px){
-    .profile__about{
-        display: flex;
-        right: 180px;
+        font-size: 15px;
+        margin-left: 270px;
     }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 570px){
     .profile__about{
-        position: absolute;
-        left: 250px;
-        top: 450px;
+        margin-left: 250px;
     }
 }
+/*
+
+
+
 
 @media  screen and (max-width:320px) {
     .profile__about{

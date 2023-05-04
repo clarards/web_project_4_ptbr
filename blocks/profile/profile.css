@@ -12,3 +12,17 @@
         min-width: 90%;
     }
 }
+
+@media screen and (max-width: 670px){
+    .profile{
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+}
+
+@media screen and (max-width: 570px){
+    .profile{
+        max-width: 80%;
+    }
+}

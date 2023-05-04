@@ -1,6 +1,13 @@
 .profile__person{
     display: flex;
     align-items: baseline;
-    gap: 25px;
+    gap: 20px;
 }
 
+@media screen and (max-width: 670px){
+    .profile__person{
+        align-items: center;
+        gap: 5px;
+        
+    }
+}
