@@ -9,12 +9,6 @@
     cursor: pointer;
 }
 
-/*
-.like__button-active{
-   
+.like__button-active {
+    background-image: url(../../../images/heart-active.png);  
 }
-
-.like__button-active:hover{
-   
-
-}*/
