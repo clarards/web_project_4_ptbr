@@ -1,32 +1,7 @@
 .footer{
-    max-width: 880px;
     color: #545454;
     margin-top: 50px;
-    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
-
-/*
-@media screen and (max-width: 868px){
-    .footer{
-        margin-top: 30px;
-    }
-}
-@media screen and (max-width: 768px){
-    .footer{
-        margin-top: 10px;
-        margin-left: 60px;
-    }
-}
-
-@media screen and (max-width: 550px){
-    .footer{
-        margin-top: 200px;
-    }
-}
-
-@media screen and (max-width: 320px){
-    .footer{
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-}*/

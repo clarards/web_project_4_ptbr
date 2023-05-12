@@ -12,9 +12,9 @@
     .popup{
         max-width: 400px;
         position: fixed;
-
     }
 }
+
 @media screen and (max-width: 320px){
     .popup{
         max-width: 282px;
