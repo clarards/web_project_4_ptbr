@@ -1,4 +1,4 @@
-.popup__container{
+.popup__container-card{
     margin: 0 auto;
     display: none;
     height: 330px;
@@ -8,8 +8,7 @@
     border-radius: 15px;
 }
 
-.popup__container-active{
+.popup__container-card-active{
     display: block;
     z-index: 1; 
 }
-

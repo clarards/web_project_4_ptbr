@@ -1,0 +1,7 @@
+.popup__image{
+    display: none;
+}
+
+.popup__image-active{
+    display: block;
+}

@@ -2,12 +2,12 @@
 const editButton = document.querySelector('.edit__button');
 const closeButton = document.querySelector('.input__close__button');
 const addButton = document.querySelector('.add__button');
-const likeButton = document.querySelectorAll('.like__button');
 const deleteCardButton = document.querySelector('.trash__icon');
 const saveButton = document.querySelector('.input__save__button');
 
 //popups
 const userInfo = document.querySelector('.popup__container');
+const addCardPopup = document.querySelector('.popup__container-card');
 const inputName = document.querySelector('#input-name');
 const inputAbout = document.querySelector('#input-about');
 const userName = document.querySelector('.profile__name');
@@ -16,7 +16,6 @@ const userAbout = document.querySelector('.profile__about');
 //cards
 const cardTemplate = document.querySelector('#cards').content;
 const initialCardsContainer = document.querySelector('.initial-cards');
-
 const initialCards = [ 
   {
     name: "Vale de Yosemite",
@@ -49,13 +48,31 @@ initialCards.forEach(function(item) {
   const card = cardTemplate.querySelector('.card').cloneNode(true);
   const cardTitle = card.querySelector('.card__place');
   const cardImage = card.querySelector('.card__image');
-  const trashIcon = card.querySelector('.trash__icon');
+  const likeButton = card.querySelector('.like__button');
+
 
   cardTitle.textContent = item.name;
   cardImage.src = item.link;
   cardImage.alt = item.name;
 
   initialCardsContainer.appendChild(card);
+
+});
+
+initialCardsContainer.addEventListener('click', function(evt) {
+  if (evt.target.classList.contains('trash__icon')) {
+    const card = evt.target.closest('.card');
+    if (card) {
+      card.remove();
+    }
+  }
+});
+
+initialCardsContainer.addEventListener('click', function(evt) {
+  if (evt.target.classList.contains('like__button')) {
+    const likeButton = evt.target;
+    likeButton.classList.toggle('like__button-active');
+  }
 });
 
 
@@ -78,10 +95,4 @@ function saveUserInfo(evt){
 }
 saveButton.addEventListener('click', saveUserInfo);
 
-function LikeIcon() {
-  likeButton.forEach(function (item) {
-    item.addEventListener("click", function (evt) {
-      item.classList.toggle("like__button-active");
-    });
-  });
-}
+

@@ -24,15 +24,30 @@
 
                 <h2 class="input__title">Editar perfil</h2>
                 <div class="input__info">
-                    <input type="text" placeholder="Seu nome" value= '' name="name" class="input__name_text" id="input-name" required>
-                </div>
-                <div class="input__info">
-                    <input type="text" placeholder="Sobre mim" value= '' name="description" class="input__about_text" id="input-about" required>
+                    <input type="text" placeholder="Seu nome" value= '' name="name" class="input__text1" id="input-name" required>
+                    <input type="text" placeholder="Sobre mim" value= '' name="description" class="input__text2" id="input-about" required>
                 </div>
                 <input type="button" value="Salvar" class="input__save__button">
             </form>
-        </div>
+          
+        <form class="popup__container-card">
+            <div class="popup__container-active-card">
+                <div class="popup__overlay"></div>
+            </div>
+            <img src="./images/close__icon.png" alt="botão de fechar" class="input__close__button">
+            <h2 class="input__title">Novo local</h2>
+            <div class="input__info">
+                <input type="text" placeholder="Título" name="place" class="input__text1" required>
+                <input type="url" placeholder="Link da imagem" name="link" class="input__text2">
+            </div>
+            <input type="button" value="Criar" class="input__save__button">
+
+        </form>
+
+        <figure></figure>
         </section>
+
+
 
 
         <section class="profile">
@@ -45,7 +60,6 @@
             <p class="profile__about">Explorer</p>                 
             </div>
             <img src="./images/add_button.png" alt="Botão de adicionar" class="add__button">
-
         </section>
 
         <template id="cards">
@@ -59,7 +73,6 @@
             </div>
         </template>
         <div class="initial-cards"></div>
-        
     </main>
 
     <footer>
