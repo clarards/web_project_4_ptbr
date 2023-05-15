@@ -1,8 +1,8 @@
-.edit__button{
+.edit-button{
     width: 24px;
 }
 
-.edit__button:hover{
+.edit-button:hover{
     opacity: 50%;
     cursor: pointer;
 }
