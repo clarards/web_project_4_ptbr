@@ -1,10 +1,10 @@
 //buttons
 const editButton = document.querySelector('.edit__button');
-const closeButton = document.querySelector('.input__close__button');
-const closeButtonCard = document.querySelector('.input__close__button-card')
+const closeButton = document.querySelector('.input__close-button');
+const closeButtonCard = document.querySelector('.input__close-button-card')
 const addButton = document.querySelector('.add__button');
 const deleteCardButton = document.querySelector('.trash__icon');
-const saveButton = document.querySelector('.input__save__button');
+const saveButton = document.querySelector('.input__save-button');
 const createButton = document.querySelector('.input__save__button-card')
 
 //popups
