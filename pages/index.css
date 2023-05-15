@@ -17,6 +17,9 @@
 @import url(../blocks/popup/__name_text/popup__name_text.css);
 @import url(../blocks/popup/__about_text/popup__about_text.css);
 @import url(../blocks/popup/__container-card/popup__container-card.css);
+@import url(../blocks/popup/__photo/popup__container-photo.css);
+@import url(../blocks/popup/__photo-big/popup__photo-big.css);
+
 
 
 @import url(../blocks/profile/profile.css);

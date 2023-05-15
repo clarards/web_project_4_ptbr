@@ -1,6 +1,7 @@
 //buttons
 const editButton = document.querySelector('.edit__button');
 const closeButton = document.querySelector('.input__close__button');
+const closeButtonCard = document.querySelector('.input__close__button-card')
 const addButton = document.querySelector('.add__button');
 const deleteCardButton = document.querySelector('.trash__icon');
 const saveButton = document.querySelector('.input__save__button');
@@ -96,3 +97,12 @@ function saveUserInfo(evt){
 saveButton.addEventListener('click', saveUserInfo);
 
 
+function openCardPopup() {
+  addCardPopup.classList.add('popup__container-card-active');
+}
+function closeCardPopup() {
+  addCardPopup.classList.remove('popup__container-card-active');
+}
+
+addButton.addEventListener('click', openCardPopup);
+closeButtonCard.addEventListener('click', closeCardPopup);
