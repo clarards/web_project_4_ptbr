@@ -5,6 +5,7 @@ const closeButtonCard = document.querySelector('.input__close__button-card')
 const addButton = document.querySelector('.add__button');
 const deleteCardButton = document.querySelector('.trash__icon');
 const saveButton = document.querySelector('.input__save__button');
+const createButton = document.querySelector('.input__save__button-card')
 
 //popups
 const userInfo = document.querySelector('.popup__container');
@@ -13,6 +14,8 @@ const inputName = document.querySelector('#input-name');
 const inputAbout = document.querySelector('#input-about');
 const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__about');
+const inputTitle = document.querySelector('#title-name');
+const inputLink = document.querySelector('#url-link');
 
 //cards
 const cardTemplate = document.querySelector('#cards').content;
@@ -103,6 +106,25 @@ function openCardPopup() {
 function closeCardPopup() {
   addCardPopup.classList.remove('popup__container-card-active');
 }
-
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
+
+function addNewCard (evt){
+
+
+  closeCardPopup();
+}
+createButton.addEventListener('click', addNewCard);
+
+function openImagePopup() {
+  const imageContainer = document.querySelector('.popup__container-photo').content;
+  const imageOpen = imageContainer.querySelector('.popup__photo-open').cloneNode(true);
+  const imageOnScreen = document.querySelector('.opened__image-popup');
+  const popupImageBig = imageOpen.querySelector('.popup__photo-big');
+  const imageTitle = imageOpen.querySelector('.popup__photo-title');
+
+  imageOnScreen.classList.add('popup__container-photo-opened');
+  imageOnScreen.appendChild(imageOpen);
+
+}
+cardImage.addEventListener('click', openImagePopup);

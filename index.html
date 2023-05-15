@@ -39,10 +39,10 @@
             <img src="./images/close__icon.png" alt="botão de fechar" class="input__close__button input__close__button-card">
             <h2 class="input__title">Novo local</h2>
             <div class="input__info">
-                <input type="text" placeholder="Título" name="place" class="input__text1" required>
-                <input type="url" placeholder="Link da imagem" name="link" class="input__text2">
+                <input type="text" placeholder="Título" name="place" class="input__text1" id="title-name" required>
+                <input type="url" placeholder="Link da imagem" name="link" class="input__text2" id="url-link" required>
             </div>
-            <input type="button" value="Criar" class="input__save__button">
+            <input type="button" value="Criar" class="input__save__button input__save__button-card">
         </form>
         </section>
 
@@ -73,13 +73,14 @@
         <div class="initial-cards"></div>
     </main>
 
-    <!--<template class="popup__container-photo">
+    <ul class="opened__image-popup"></ul>
+    <template class="popup__container-photo">
         <li class="popup__photo-open">
         <img src="./images/close__icon.png" alt="Botão de fechar" class="input__close__button">
           <img class="popup__photo-big" src=" " alt=" ">
-          <h3 class="popup__photo-title"></h3>
+          <h2 class="popup__photo-title"></h2>
         </li>
-      </template>-->
+      </template>
 
     <footer>
         <p class="footer"> &copy; 2023 Around the world</p>
