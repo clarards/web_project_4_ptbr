@@ -1,7 +1,7 @@
 //buttons
 const editButton = document.querySelector('.edit__button');
-const closeButton = document.querySelector('.input__close-button');
-const closeButtonCard = document.querySelector('.input__close-button-card')
+const closeButton = document.querySelector('.close-button');
+const closeButtonCard = document.querySelector('.close-button-card')
 const addButton = document.querySelector('.add__button');
 const deleteCardButton = document.querySelector('.trash__icon');
 const saveButton = document.querySelector('.input__save-button');
@@ -119,12 +119,9 @@ createButton.addEventListener('click', addNewCard);
 function openImagePopup() {
   const imageContainer = document.querySelector('.popup__container-photo').content;
   const imageOpen = imageContainer.querySelector('.popup__photo-open').cloneNode(true);
-  const imageOnScreen = document.querySelector('.opened__image-popup');
   const popupImageBig = imageOpen.querySelector('.popup__photo-big');
   const imageTitle = imageOpen.querySelector('.popup__photo-title');
 
-  imageOnScreen.classList.add('popup__container-photo-opened');
-  imageOnScreen.appendChild(imageOpen);
 
 }
 cardImage.addEventListener('click', openImagePopup);
