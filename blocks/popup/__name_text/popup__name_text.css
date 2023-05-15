@@ -1,4 +1,4 @@
-.input__text1{
+.input-name{
     background-color: transparent;
     border: none;
     text-align: center;
@@ -9,13 +9,13 @@
 }
 
 @media screen and (max-width: 540px){
-    .input__text1{
+    .input-name{
         width: 360px;
     }
 }
 
 @media screen and (max-width: 320px){
-    .input__text1{
+    .input-name{
         width: 240px;
     }
 }
