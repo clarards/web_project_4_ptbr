@@ -89,12 +89,8 @@ function closePopup(){
     userInfo.classList.remove('popup__container-active');
 }
 
-function closePopupThroughOverlay(){
-  userInfo.classList.remove('popup__container-active')
-}
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
-popupOverlay.addEventListener('click', closePopupThroughOverlay);
 
 function saveUserInfo(evt){
     evt.preventDefault();
@@ -106,15 +102,19 @@ function saveUserInfo(evt){
 }
 saveButton.addEventListener('click', saveUserInfo);
 
-
 function openCardPopup() {
   addCardPopup.classList.add('popup__container-card-active');
 }
 function closeCardPopup() {
   addCardPopup.classList.remove('popup__container-card-active');
 }
+function closeCardPopupThroughOverlay(){
+  addCardPopup.classList.remove('popup__container-card-active');
+}
+
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
+popupOverlay.addEventListener('click', closeCardPopupThroughOverlay);
 
 function addNewCard (evt){
 
@@ -133,4 +133,38 @@ function openImagePopup() {
 }
 cardImage.addEventListener('click', openImagePopup);
 
+function addNewCard(evt) {
+  evt.preventDefault();
 
+  const title = inputTitle.value;
+  const url = inputLink.value;
+
+  const newCard = {name: title, link: url
+  };
+
+  initialCards.push(newCard);
+
+  const card = cardTemplate.querySelector('.card').cloneNode(true);
+  const cardTitle = card.querySelector('.card__place');
+  const cardImage = card.querySelector('.card__image');
+  const likeButton = card.querySelector('.like__button');
+  const deleteButton = card.querySelector('.trash__icon');
+
+  cardTitle.textContent = newCard.name;
+  cardImage.src = newCard.link;
+  cardImage.alt = newCard.name;
+
+  deleteButton.addEventListener('click', function() {
+    card.remove();
+  });
+
+  likeButton.addEventListener('click', function() {
+    likeButton.classList.toggle('like__button-active');
+  });
+
+  initialCardsContainer.prepend(card);
+
+  closeCardPopup();
+}
+
+createButton.addEventListener('click', addNewCard);
