@@ -12,6 +12,12 @@
     cursor: pointer;
 }
 
+.save-button-unable{
+    background-color: #fff;
+    color: #000;
+    opacity: 0.5;
+}
+
 @media screen and (max-width: 540px){
     .save-button{
         width: 340px;

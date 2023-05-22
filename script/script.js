@@ -5,9 +5,11 @@ const closeButtonCard = document.querySelector('.close-button-card')
 const addButton = document.querySelector('.add-button');
 const deleteCardButton = document.querySelector('.trash__icon');
 const saveButton = document.querySelector('.save-button');
-const createButton = document.querySelector('.save-button-card')
+const createButton = document.querySelector('.save-button-card');
+const popupOverlay = document.querySelector('.popup__overlay')
 
 //popups
+const popupUserInfo = document.querySelector('.info')
 const userInfo = document.querySelector('.popup__container');
 const addCardPopup = document.querySelector('.popup__container-card');
 const inputName = document.querySelector('#input-name');
@@ -86,8 +88,13 @@ function openPopup(){
 function closePopup(){
     userInfo.classList.remove('popup__container-active');
 }
+
+function closePopupThroughOverlay(){
+  userInfo.classList.remove('popup__container-active')
+}
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
+popupOverlay.addEventListener('click', closePopupThroughOverlay);
 
 function saveUserInfo(evt){
     evt.preventDefault();
@@ -125,3 +132,5 @@ function openImagePopup() {
 
 }
 cardImage.addEventListener('click', openImagePopup);
+
+

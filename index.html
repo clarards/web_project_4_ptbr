@@ -13,8 +13,7 @@
     <header class="header">
         <img src="./images/site__icon.png" alt="ícone do site 'Around US'" class="header__icon">
     </header>
-
-
+    
     <main>
         <section class="popup">
             <form class="popup__container">
@@ -25,8 +24,8 @@
 
                 <h2 class="form-title">Editar perfil</h2>
                 <div class="info">
-                    <input type="text" placeholder="Seu nome" value= "Jacques Cousteau" name="name" class="input-name" id="input-name" required>
-                    <input type="text" placeholder="Sobre mim" value= "Explorador" name="description" class="input-text" id="input-about" required>
+                    <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" value= "Jacques Cousteau" name="name" class="input-name" id="input-name" required>
+                    <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" value= "Explorador" name="description" class="input-text" id="input-about" required>
                 </div>
                 <input type="button" value="Salvar" class="save-button">
             </form>
@@ -39,14 +38,12 @@
             <img src="./images/close__icon.png" alt="botão de fechar" class="close-button close-button-card">
             <h2 class="form-title">Novo local</h2>
             <div class="info">
-                <input type="text" placeholder="Título" name="place" class="input-name" id="title-name" required>
+                <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="input-name" id="title-name" required>
                 <input type="url" placeholder="Link da imagem" name="link" class="input-text" id="url-link" required>
             </div>
             <input type="button" value="Criar" class="save-button save-button-card">
         </form>
         </section>
-
-
         
         <section class="profile">
             <img src="./images/profile_pic.jpg" alt="Foto de perfil do usuário" class="profile__picture">
@@ -73,9 +70,8 @@
         <div class="initial-cards"></div>
     </main>
 
-
     <template class="popup__container-photo">
-        <li class="popup__photo-open">
+        <li class="popup__photo-clicked">
         <img src="./images/close__icon.png" alt="Botão de fechar" class="close-button">
           <img class="popup__photo-big" src=" " alt=" ">
           <h2 class="popup__photo-title"></h2>

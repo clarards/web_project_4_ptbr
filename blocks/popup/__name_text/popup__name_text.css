@@ -8,6 +8,14 @@
     width: 370px;
 }
 
+.input-name:invalid{
+    border-bottom: 1px solid red;;
+}
+
+.input-name:valid{
+    border-bottom: 1px solid green;
+}
+
 @media screen and (max-width: 540px){
     .input-name{
         width: 360px;
