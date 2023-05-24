@@ -12,10 +12,15 @@
     cursor: pointer;
 }
 
-.save-button-unable{
+.save-button-disabled{
     background-color: #fff;
-    color: #000;
-    opacity: 0.5;
+    border: 1px solid #acacac;
+    color: #acacac;
+}
+
+.save-button-disabled:hover{
+    cursor: default;
+    opacity: 100%;
 }
 
 @media screen and (max-width: 540px){

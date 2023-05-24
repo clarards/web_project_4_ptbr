@@ -6,7 +6,7 @@ const addButton = document.querySelector('.add-button');
 const deleteCardButton = document.querySelector('.trash__icon');
 const saveButton = document.querySelector('.save-button');
 const createButton = document.querySelector('.save-button-card');
-const popupOverlay = document.querySelector('.popup__overlay')
+const popupOverlay = document.querySelector('.popup__overlay');
 
 //popups
 const popupUserInfo = document.querySelector('.info')
@@ -18,6 +18,7 @@ const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__about');
 const inputTitle = document.querySelector('#title-name');
 const inputLink = document.querySelector('#url-link');
+const linkError = document.getElementById('link-error');
 
 //cards
 const cardTemplate = document.querySelector('#cards').content;
@@ -88,18 +89,28 @@ function openPopup(){
 function closePopup(){
     userInfo.classList.remove('popup__container-active');
 }
+function closePopupThroughOverlay(){
+  userInfo.classList.remove('popup__container-card-active');
+}
 
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
+popupOverlay.addEventListener('click', closePopupThroughOverlay);
 
-function saveUserInfo(evt){
-    evt.preventDefault();
 
-    userName.textContent = inputName.value;
-    userAbout.textContent = inputAbout.value;
+function saveUserInfo(evt) {
+  evt.preventDefault();
 
-    closePopup();
+  if (!validateFields()) {
+    return;
+  }
+
+  userName.textContent = inputName.value;
+  userAbout.textContent = inputAbout.value;
+
+  closePopup();
 }
+
 saveButton.addEventListener('click', saveUserInfo);
 
 function openCardPopup() {
@@ -108,13 +119,10 @@ function openCardPopup() {
 function closeCardPopup() {
   addCardPopup.classList.remove('popup__container-card-active');
 }
-function closeCardPopupThroughOverlay(){
-  addCardPopup.classList.remove('popup__container-card-active');
-}
+
 
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
-popupOverlay.addEventListener('click', closeCardPopupThroughOverlay);
 
 function addNewCard (evt){
 
@@ -128,9 +136,8 @@ function openImagePopup() {
   const imageOpen = imageContainer.querySelector('.popup__photo-open').cloneNode(true);
   const popupImageBig = imageOpen.querySelector('.popup__photo-big');
   const imageTitle = imageOpen.querySelector('.popup__photo-title');
-
-
 }
+
 cardImage.addEventListener('click', openImagePopup);
 
 function addNewCard(evt) {
@@ -158,7 +165,7 @@ function addNewCard(evt) {
     card.remove();
   });
 
-  likeButton.addEventListener('click', function() {
+  likeButton.addEventListener('click', function(evt) {
     likeButton.classList.toggle('like__button-active');
   });
 

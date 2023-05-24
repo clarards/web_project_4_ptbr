@@ -9,4 +9,4 @@
 
 **Sobre o projeto**
 
-Esse projeto é uma página de rede social para publicação de fotos. No momento, a página tem o recurso de adicionar o nome do usuário e uma pequena descrição sobre ele.
+Esse projeto é uma página de rede social para publicação de fotos. A página tem função de adicionar nome de usuário, uma descrição sobre ele e adicionar novos cards. Também foi criada uma função para validar o formulário onde o usuário só consegue salvar caso cumpra as requisições pedidas.

@@ -1,0 +1,10 @@
+.error-message{
+    color: red;
+    font-size: 15px;
+    position: absolute;
+    display: none;
+}
+
+#name-error{
+    bottom: 180px;
+}
