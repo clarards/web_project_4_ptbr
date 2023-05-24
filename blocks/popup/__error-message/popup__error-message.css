@@ -5,6 +5,6 @@
     display: none;
 }
 
-#name-error{
+#name-error, #title-error{
     bottom: 180px;
 }

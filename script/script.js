@@ -16,8 +16,8 @@ const inputName = document.querySelector('#input-name');
 const inputAbout = document.querySelector('#input-about');
 const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__about');
-const inputTitle = document.querySelector('#title-name');
-const inputLink = document.querySelector('#url-link');
+const inputTitle = document.querySelector('.input-name-title');
+const inputLink = document.querySelector('.input-text-link');
 const linkError = document.getElementById('link-error');
 
 //cards
@@ -131,14 +131,6 @@ function addNewCard (evt){
 }
 createButton.addEventListener('click', addNewCard);
 
-function openImagePopup() {
-  const imageContainer = document.querySelector('.popup__container-photo').content;
-  const imageOpen = imageContainer.querySelector('.popup__photo-open').cloneNode(true);
-  const popupImageBig = imageOpen.querySelector('.popup__photo-big');
-  const imageTitle = imageOpen.querySelector('.popup__photo-title');
-}
-
-cardImage.addEventListener('click', openImagePopup);
 
 function addNewCard(evt) {
   evt.preventDefault();
