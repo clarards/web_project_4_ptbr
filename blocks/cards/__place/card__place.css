@@ -7,3 +7,12 @@
     overflow: hidden;
     margin-left: 10px;
 }
+
+.card-place-expanded {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  

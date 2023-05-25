@@ -90,7 +90,7 @@ function closePopup(){
     userInfo.classList.remove('popup__container-active');
 }
 function closePopupThroughOverlay(){
-  userInfo.classList.remove('popup__container-card-active');
+  userInfo.classList.remove('popup__container-active');
 }
 
 editButton.addEventListener('click', openPopup);
@@ -123,14 +123,6 @@ function closeCardPopup() {
 
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
-
-function addNewCard (evt){
-
-
-  closeCardPopup();
-}
-createButton.addEventListener('click', addNewCard);
-
 
 function addNewCard(evt) {
   evt.preventDefault();
@@ -165,5 +157,31 @@ function addNewCard(evt) {
 
   closeCardPopup();
 }
-
 createButton.addEventListener('click', addNewCard);
+
+const closeButtonImg = document.querySelector('.close-button-img');
+
+function openImage() {
+  const imageSrc = this.parentElement.querySelector('.card__image').src;
+  const title = this.parentElement.querySelector('.card__place').textContent;
+
+  const expandedImage = document.querySelector('.expanded-image');
+  const imageTitle = document.querySelector('.card-place-expanded');
+
+  expandedImage.src = imageSrc;
+  imageTitle.textContent = title;
+
+  const imageModal = document.getElementById('imageModal');
+  imageModal.style.display = 'block';
+}
+
+const cards = document.querySelectorAll('.card');
+cards.forEach((card) => {
+  const imageElement = card.querySelector('.card__image');
+  imageElement.addEventListener('click', openImage);
+});
+
+closeButtonImg.addEventListener('click', () => {
+  const imageModal = document.getElementById('imageModal');
+  imageModal.style.display = 'none';
+});
