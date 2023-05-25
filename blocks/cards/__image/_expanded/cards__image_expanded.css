@@ -4,4 +4,6 @@
     display: block;
     margin: 0 auto;
     margin-top: 70px;
+    animation: smooth 0.5s ease-in-out;
+
   }

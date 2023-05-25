@@ -101,17 +101,18 @@ popupOverlay.addEventListener('click', closePopupThroughOverlay);
 function saveUserInfo(evt) {
   evt.preventDefault();
 
-  if (!validateFields()) {
+  if (!validateFields(popupUserInfo)) {
     return;
   }
 
   userName.textContent = inputName.value;
   userAbout.textContent = inputAbout.value;
 
-  closePopup();
+  closePopup(userInfo);
 }
 
 saveButton.addEventListener('click', saveUserInfo);
+
 
 function openCardPopup() {
   addCardPopup.classList.add('popup__container-card-active');

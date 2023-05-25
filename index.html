@@ -15,7 +15,7 @@
     
     <main>
         <section class="popup">
-            <form class="popup__container">
+            <form class="popup__container" novalidate>
                 <div class="popup__container-active">
                     <div class="popup__overlay"></div>
                 </div>
@@ -24,16 +24,16 @@
                 <h2 class="form-title">Editar perfil</h2>
                 <div class="info">
                     <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" value="Jacques Cousteau" name="name" class="input-name" id="input-name" required>
-                    <div class="error-message" id="name-error"></div> <!-- Mensagem de erro para o campo de nome -->
+                    <div class="error-message" id="name-error"></div>
                     <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" value="Explorador" name="description" class="input-text" id="input-about" required>
-                    <div class="error-message" id="description-error"></div> <!-- Mensagem de erro para o campo de descrição -->
+                    <div class="error-message" id="description-error"></div>
                 </div>
                 <input type="button" value="Salvar" class="save-button save-button-disabled">
             </form>
             
           
             <form class="popup__container-card">
-                <div class="popup__container-active-card">
+                <div class="popup__container-active-card" novalidade>
                     <div class="popup__overlay"></div>
                 </div>
                 <img src="./images/close__icon.png" alt="botão de fechar" class="close-button close-button-card">
@@ -85,6 +85,6 @@
         <p class="footer"> &copy; 2023 Around the world</p>
     </footer>
     <script src="./script/script.js"></script>
-    <script src="./script/validade.js"></script>
+    <script src="./script/validate.js"></script>
 </body>
 </html>
