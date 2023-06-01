@@ -101,7 +101,7 @@ popupOverlay.addEventListener('click', closePopupThroughOverlay);
 const saveUserInfo = (evt) => {
   evt.preventDefault();
 
-  if (!validateFields(popupUserInfo)) {
+  if (validateFields(popupUserInfo)) {
     return;
   }
 

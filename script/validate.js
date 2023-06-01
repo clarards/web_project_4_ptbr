@@ -21,7 +21,7 @@ const enableValidation = () => {
     }
   };
 
-  const validateForm = (form) => {
+  const validateFields = (form) => {
     let isValid = true;
     const inputs = form.querySelectorAll('input');
 
@@ -39,19 +39,17 @@ const enableValidation = () => {
     checkValidity(input);
 
     const form = input.closest('form');
-    const saveButton = form.querySelector('.save-button');
-    const saveCardButton = form.querySelector('.save-button-card');
 
-    if (validateForm(form)) {
+    if (validateFields(form)) {
       saveButton.removeAttribute('disabled');
-      saveCardButton.removeAttribute('disabled');
+      createButton.removeAttribute('disabled');
       saveButton.classList.remove('save-button-disabled');
-      saveCardButton.classList.remove('save-button-card-disabled');
+      createButton.classList.remove('save-button-card-disabled');
     } else {
       saveButton.setAttribute('disabled', true);
-      saveCardButton.setAttribute('disabled', true);
+      createButton.setAttribute('disabled', true);
       saveButton.classList.add('save-button-disabled');
-      saveCardButton.classList.add('save-button-card-disabled');
+      createButton.classList.add('save-button-card-disabled');
     }
   };
 
