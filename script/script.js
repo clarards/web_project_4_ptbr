@@ -98,7 +98,7 @@ closeButton.addEventListener('click', closePopup);
 popupOverlay.addEventListener('click', closePopupThroughOverlay);
 
 
-function saveUserInfo(evt) {
+const saveUserInfo = (evt) => {
   evt.preventDefault();
 
   if (!validateFields(popupUserInfo)) {
@@ -109,7 +109,7 @@ function saveUserInfo(evt) {
   userAbout.textContent = inputAbout.value;
 
   closePopup(userInfo);
-}
+};
 
 saveButton.addEventListener('click', saveUserInfo);
 
