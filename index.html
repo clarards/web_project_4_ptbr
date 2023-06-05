@@ -15,7 +15,7 @@
     
     <main>
         <section class="popup">
-            <form class="popup__container" novalidate>
+            <form class="popup__container" name="form" novalidate>
                 <div class="popup__container-active">
                     <div class="popup__overlay"></div>
                 </div>
@@ -23,15 +23,15 @@
         
                 <h2 class="form-title">Editar perfil</h2>
                 <div class="info">
-                    <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" value="Jacques Cousteau" name="name" class="input-name required" id="input-name" required>
-                    <span class="span error-message" id="name-error"></span>
-                    <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" value="Explorador" name="description" class="input-text required" id="input-about" required>
-                    <span class="span error-message" id="description-error"></span>
+                    <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" name="name" class="input-name required" id="input-name" required>
+                    <span class="input-error error-message" id="name-error"></span>
+                    <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" name="description" class="input-text required" id="input-about" required>
+                    <span class="error-message" id="description-error"></span>
                 </div>
                 <input type="button" value="Salvar" class="save-button save-button-user save-button-disabled" disabled>
             </form>
         
-            <form class="popup__container-card">
+            <form class="popup__container-card" name="form" novalidate>
                 <div class="popup__container-active-card" novalidade>
                     <div class="popup__overlay"></div>
                 </div>
@@ -39,11 +39,11 @@
                 <h2 class="form-title">Novo local</h2>
                 <div class="info">
                     <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="input-name input-name-title required" id="title-name" required>
-                    <span class="span error-message" id="title-error"></span>
+                    <span class="error-message" id="title-error"></span>
                     <input type="url" placeholder="Link da imagem" name="link" class="input-text input-text-link required" id="url-link" required>
-                    <span class=" span error-message" id="link-error"></span>
+                    <span class="error-message" id="link-error"></span>
                 </div>
-                <input type="submit" value="Criar" class="save-button save-button-card save-button-disabled">
+                <input type="submit" value="Criar" class="save-button save-button-card save-button-disabled" disabled>
             </form>
         </section>
         

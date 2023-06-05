@@ -1,25 +1,15 @@
-const enableValidation = ({
-  inputError,
-  saveButtonUser,
-  saveButtonCard,
-  saveButtonUserDisabled,
-  saveButtonCardDisabled,
-}) => {
-  const inputFieldsValidation = (input) => {
+const enableValidation = () => {
+  const validateField = (input) => {
+    const errorMessage = input.nextElementSibling;
+    
     input.addEventListener("input", function (evt) {
-      const element = evt.target;
-      const ErrorMessage = document.querySelector(`[data-error-message="${element.name}"]`);
-      if (!element.validity.valid) {
-        input.classList.add(inputError);
-        if (element.type === 'url' && element.value.trim() != '') {
-          ErrorMessage.textContent = 'Insira um endereço web.';
-        } else {
-          ErrorMessage.textContent = element.validationMessage;
-        }
+      if (!input.validity.valid) {
+        input.classList.add('input-error');
+        errorMessage.textContent = input.validationMessage;
         disableButtons();
       } else {
-        input.classList.remove(inputError);
-        ErrorMessage.textContent = "";
+        input.classList.remove('input-error');
+        errorMessage.textContent = "";
         if (isValidForm()) {
           enableButtons();
         }
@@ -28,31 +18,34 @@ const enableValidation = ({
   };
 
   const disableButtons = () => {
-    const saveButtonEdit = document.querySelector(saveButtonUser);
-    const saveButtonInclude = document.querySelector(saveButtonCard);
-    saveButtonEdit.setAttribute("disabled", true);
+    const saveButton = document.querySelector('.save-button');
+    const saveButtonInclude = document.querySelector('.save-button-card');
+    saveButton.setAttribute("disabled", true);
     saveButtonInclude.setAttribute("disabled", true);
-    saveButtonEdit.classList.add(saveButtonUserDisabled);
-    saveButtonInclude.classList.add(saveButtonCardDisabled);
+    saveButton.classList.add('save-button-disabled');
+    saveButtonInclude.classList.add('save-button-card-disabled');
   };
 
   const enableButtons = () => {
-    const saveButtonEdit = document.querySelector(saveButtonUser);
-    const saveButtonInclude = document.querySelector(saveButtonCard);
-    saveButtonEdit.removeAttribute("disabled");
+    const saveButton = document.querySelector('.save-button');
+    const saveButtonInclude = document.querySelector('.save-button-card');
+    saveButton.removeAttribute("disabled");
     saveButtonInclude.removeAttribute("disabled");
-    saveButtonEdit.classList.remove(saveButtonUserDisabled);
-    saveButtonInclude.classList.remove(saveButtonCardDisabled);
+    saveButton.classList.remove('save-button-disabled');
+    saveButtonInclude.classList.remove('save-button-card-disabled');
   };
 
-  const allForms = Array.from(document.forms);
-  for (const form of allForms) {
-    const inputs = Array.from(form.elements);
-    const isValidForm = () => inputs.every((input) => input.validity.valid);
+  const isValidForm = () => {
+    const form = document.querySelector('form[name="form"]');
+    return form.checkValidity();
+  };
 
-    inputs.forEach((element) => {
-      inputFieldsValidation(element);
-      element.addEventListener("input", function (evt) {
+  const forms = document.querySelectorAll('form[name="form"]');
+  forms.forEach((form) => {
+    const inputs = form.querySelectorAll('.required');
+    inputs.forEach((input) => {
+      validateField(input);
+      input.addEventListener("input", function (evt) {
         if (isValidForm()) {
           enableButtons();
         } else {
@@ -60,13 +53,7 @@ const enableValidation = ({
         }
       });
     });
-  }
+  });
 };
 
-enableValidation({
-  inputError: "input-error",
-  saveButtonUser: ".save-button",
-  saveButtonCard: ".save-button-card",
-  saveButtonUserDisabled: "save-button-disabled",
-  saveButtonCardDisabled: "save-button-card-disabled",
-});
+enableValidation();

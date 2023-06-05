@@ -1,10 +1,9 @@
+.input-error {
+  border-color: red;
+}
+
 .error-message {
-    display: block;
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-  }
-  
-#name-error, #title-error{
-    bottom: 175px;
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
 }

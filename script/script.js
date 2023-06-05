@@ -101,12 +101,15 @@ function saveUserInfo(evt) {
   if (!validateFields()) {
     return;
   }
+
   userName.textContent = inputName.value;
   userAbout.textContent = inputAbout.value;
 
   closePopup();
 }
+
 saveButton.addEventListener('click', saveUserInfo);
+
 
 function openCardPopup() {
   addCardPopup.classList.add('popup__container-card-active');
