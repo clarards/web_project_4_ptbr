@@ -1,4 +1,4 @@
-.save-button{
+.save-button {
     border: none;
     width: 358px;
     height: 50px;
@@ -12,7 +12,8 @@
     cursor: pointer;
 }
 
-.save-button-disabled, .save-button-card-disabled{
+
+.save-button-disabled, .save-button-card-disabled {
     background-color: #fff;
     border: 1px solid #acacac;
     color: #acacac;
@@ -22,7 +23,6 @@
     cursor: default;
     opacity: 100%;
 }
-
 
 
 @media screen and (max-width: 540px){

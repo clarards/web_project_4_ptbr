@@ -1,65 +1,72 @@
-const enableValidation = () => {
-  const showErrorMessage = (input) => {
-    const errorMessage = input.nextElementSibling;
-    errorMessage.textContent = input.validationMessage;
-    errorMessage.style.display = 'block';
-  };
-
-  const hideErrorMessage = (input) => {
-    const errorMessage = input.nextElementSibling;
-    errorMessage.textContent = '';
-    errorMessage.style.display = 'none';
-  };
-
-  const checkValidity = (input) => {
-    if (!input.validity.valid) {
-      showErrorMessage(input);
-      return false;
-    } else {
-      hideErrorMessage(input);
-      return true;
-    }
-  };
-
-  const validateFields = (form) => {
-    let isValid = true;
-    const inputs = form.querySelectorAll('input');
-
-    inputs.forEach((input) => {
-      if (!checkValidity(input)) {
-        isValid = false;
+const enableValidation = ({
+  inputError,
+  saveButtonUser,
+  saveButtonCard,
+  saveButtonUserDisabled,
+  saveButtonCardDisabled,
+}) => {
+  const inputFieldsValidation = (input) => {
+    input.addEventListener("input", function (evt) {
+      const element = evt.target;
+      const ErrorMessage = document.querySelector(`[data-error-message="${element.name}"]`);
+      if (!element.validity.valid) {
+        input.classList.add(inputError);
+        if (element.type === 'url' && element.value.trim() != '') {
+          ErrorMessage.textContent = 'Insira um endereço web.';
+        } else {
+          ErrorMessage.textContent = element.validationMessage;
+        }
+        disableButtons();
+      } else {
+        input.classList.remove(inputError);
+        ErrorMessage.textContent = "";
+        if (isValidForm()) {
+          enableButtons();
+        }
       }
     });
-
-    return isValid;
   };
 
-  const handleInput = (evt) => {
-    const input = evt.target;
-    checkValidity(input);
-
-    const form = input.closest('form');
-
-    if (validateFields(form)) {
-      saveButton.removeAttribute('disabled');
-      createButton.removeAttribute('disabled');
-      saveButton.classList.remove('save-button-disabled');
-      createButton.classList.remove('save-button-card-disabled');
-    } else {
-      saveButton.setAttribute('disabled', true);
-      createButton.setAttribute('disabled', true);
-      saveButton.classList.add('save-button-disabled');
-      createButton.classList.add('save-button-card-disabled');
-    }
+  const disableButtons = () => {
+    const saveButtonEdit = document.querySelector(saveButtonUser);
+    const saveButtonInclude = document.querySelector(saveButtonCard);
+    saveButtonEdit.setAttribute("disabled", true);
+    saveButtonInclude.setAttribute("disabled", true);
+    saveButtonEdit.classList.add(saveButtonUserDisabled);
+    saveButtonInclude.classList.add(saveButtonCardDisabled);
   };
 
-  const forms = document.querySelectorAll('form');
-  forms.forEach((form) => {
-    const inputs = form.querySelectorAll('input');
-    inputs.forEach((input) => {
-      input.addEventListener('input', handleInput);
+  const enableButtons = () => {
+    const saveButtonEdit = document.querySelector(saveButtonUser);
+    const saveButtonInclude = document.querySelector(saveButtonCard);
+    saveButtonEdit.removeAttribute("disabled");
+    saveButtonInclude.removeAttribute("disabled");
+    saveButtonEdit.classList.remove(saveButtonUserDisabled);
+    saveButtonInclude.classList.remove(saveButtonCardDisabled);
+  };
+
+  const allForms = Array.from(document.forms);
+  for (const form of allForms) {
+    const inputs = Array.from(form.elements);
+    const isValidForm = () => inputs.every((input) => input.validity.valid);
+
+    inputs.forEach((element) => {
+      inputFieldsValidation(element);
+      element.addEventListener("input", function (evt) {
+        if (isValidForm()) {
+          enableButtons();
+        } else {
+          disableButtons();
+        }
+      });
     });
-  });
+  }
 };
 
-enableValidation();
+enableValidation({
+  inputError: "input-error",
+  saveButtonUser: ".save-button",
+  saveButtonCard: ".save-button-card",
+  saveButtonUserDisabled: "save-button-disabled",
+  saveButtonCardDisabled: "save-button-card-disabled",
+});

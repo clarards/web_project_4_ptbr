@@ -20,18 +20,17 @@
                     <div class="popup__overlay"></div>
                 </div>
                 <img src="./images/close__icon.png" alt="Botão de fechar" class="close-button">
-            
+        
                 <h2 class="form-title">Editar perfil</h2>
                 <div class="info">
-                    <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" value="Jacques Cousteau" name="name" class="input-name" id="input-name" required>
-                    <div class="error-message" id="name-error"></div>
-                    <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" value="Explorador" name="description" class="input-text" id="input-about" required>
-                    <div class="error-message" id="description-error"></div>
+                    <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" value="Jacques Cousteau" name="name" class="input-name required" id="input-name" required>
+                    <span class="span error-message" id="name-error"></span>
+                    <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" value="Explorador" name="description" class="input-text required" id="input-about" required>
+                    <span class="span error-message" id="description-error"></span>
                 </div>
-                <input type="button" value="Salvar" class="save-button save-button-disabled">
+                <input type="button" value="Salvar" class="save-button save-button-user save-button-disabled" disabled>
             </form>
-            
-          
+        
             <form class="popup__container-card">
                 <div class="popup__container-active-card" novalidade>
                     <div class="popup__overlay"></div>
@@ -39,15 +38,15 @@
                 <img src="./images/close__icon.png" alt="botão de fechar" class="close-button close-button-card">
                 <h2 class="form-title">Novo local</h2>
                 <div class="info">
-                    <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="input-name input-name-title" id="title-name" required>
-                    <span class="error-message" id="title-error"></span>
-                    <input type="url" placeholder="Link da imagem" name="link" class="input-text input-text-link" id="url-link" required>
-                    <span class="error-message" id="link-error"></span>
+                    <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="input-name input-name-title required" id="title-name" required>
+                    <span class="span error-message" id="title-error"></span>
+                    <input type="url" placeholder="Link da imagem" name="link" class="input-text input-text-link required" id="url-link" required>
+                    <span class=" span error-message" id="link-error"></span>
                 </div>
-                <input type="submit" value="Criar" class="save-button save-button-card save-button-card-disabled">
+                <input type="submit" value="Criar" class="save-button save-button-card save-button-disabled">
             </form>
-            
         </section>
+        
         
         <section class="profile">
             <img src="./images/profile_pic.jpg" alt="Foto de perfil do usuário" class="profile__picture">
