@@ -19,6 +19,7 @@
 @import url(../blocks/popup/__photo/popup__container-photo.css);
 @import url(../blocks/popup/__photo-big/popup__photo-big.css);
 @import url(../blocks/popup/__error-message/popup__error-message.css);
+@import url(../blocks/popup/__error-message/input-error/popup__input-error.css);
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__flex/profile__flex.css);

@@ -18,7 +18,6 @@ const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__about');
 const inputTitle = document.querySelector('.input-name-title');
 const inputLink = document.querySelector('.input-text-link');
-const linkError = document.getElementById('link-error');
 
 // Cards
 const cardTemplate = document.querySelector('#cards').content;
@@ -95,20 +94,27 @@ editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
 popupOverlay.addEventListener('click', closePopupThroughOverlay);
 
+
 function saveUserInfo(evt) {
   evt.preventDefault();
 
-  if (!validateField()) {
+  const userInfoForm = document.forms[0];
+  if (!userInfoForm.checkValidity()) {
+    userInfoForm.reportValidity();
     return;
   }
 
-  userName.textContent = inputName.value;
-  userAbout.textContent = inputAbout.value;
+  const newName = inputName.value;
+  const newAbout = inputAbout.value;
+
+  userName.textContent = newName;
+  userAbout.textContent = newAbout;
 
   closePopup();
 }
 
 saveButton.addEventListener('click', saveUserInfo);
+
 
 
 function openCardPopup() {
@@ -122,39 +128,5 @@ function closeCardPopup() {
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
 
-function addNewCard(evt) {
-  evt.preventDefault();
 
-  const title = inputTitle.value;
-  const url = inputLink.value;
-  const newCard = {
-    name: title,
-    link: url
-  };
-
-  initialCards.push(newCard);
-
-  const card = cardTemplate.querySelector('.card').cloneNode(true);
-  const cardTitle = card.querySelector('.card__place');
-  const cardImage = card.querySelector('.card__image');
-  const likeButton = card.querySelector('.like__button');
-  const deleteButton = card.querySelector('.trash__icon');
-
-  cardTitle.textContent = newCard.name;
-  cardImage.src = newCard.link;
-  cardImage.alt = newCard.name;
-
-  deleteButton.addEventListener('click', function() {
-    card.remove();
-  });
-
-  likeButton.addEventListener('click', function(evt) {
-    likeButton.classList.toggle('like__button-active');
-  });
-
-  initialCardsContainer.prepend(card);
-
-  closeCardPopup();
-}
-
-createButton.addEventListener('click', addNewCard);
+  // Cr
