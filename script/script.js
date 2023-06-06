@@ -98,7 +98,7 @@ popupOverlay.addEventListener('click', closePopupThroughOverlay);
 function saveUserInfo(evt) {
   evt.preventDefault();
 
-  if (!validateFields()) {
+  if (!validateField()) {
     return;
   }
 

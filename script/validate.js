@@ -19,20 +19,20 @@ const enableValidation = () => {
 
   const disableButtons = () => {
     const saveButton = document.querySelector('.save-button');
-    const saveButtonInclude = document.querySelector('.save-button-card');
+    const saveButtonCard = document.querySelector('.save-button-card');
     saveButton.setAttribute("disabled", true);
-    saveButtonInclude.setAttribute("disabled", true);
+    saveButtonCard.setAttribute("disabled", true);
     saveButton.classList.add('save-button-disabled');
-    saveButtonInclude.classList.add('save-button-card-disabled');
+    saveButtonCard.classList.add('save-button-card-disabled');
   };
 
   const enableButtons = () => {
     const saveButton = document.querySelector('.save-button');
-    const saveButtonInclude = document.querySelector('.save-button-card');
+    const saveButtonCard = document.querySelector('.save-button-card');
     saveButton.removeAttribute("disabled");
-    saveButtonInclude.removeAttribute("disabled");
+    saveButtonCard.removeAttribute("disabled");
     saveButton.classList.remove('save-button-disabled');
-    saveButtonInclude.classList.remove('save-button-card-disabled');
+    saveButtonCard.classList.remove('save-button-card-disabled');
   };
 
   const isValidForm = () => {

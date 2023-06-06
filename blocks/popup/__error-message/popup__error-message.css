@@ -1,9 +1,10 @@
 .input-error {
-  border-color: red;
-}
-
-.error-message {
-  color: red;
-  font-size: 14px;
-  margin-top: 4px;
-}
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
