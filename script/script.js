@@ -129,4 +129,44 @@ addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
 
 
-  // Cr
+function addNewCard(evt) { 
+  evt.preventDefault(); 
+  
+  const title = inputTitle.value; 
+  const url = inputLink.value; 
+
+  const newCard = {name: title, link: url 
+
+  }; 
+  
+  initialCards.push(newCard); 
+
+  const card = cardTemplate.querySelector('.card').cloneNode(true); 
+  const cardTitle = card.querySelector('.card__place');
+  const cardImage = card.querySelector('.card__image'); 
+  const likeButton = card.querySelector('.like__button'); 
+  const deleteButton = card.querySelector('.trash__icon'); 
+
+ 
+
+  cardTitle.textContent = newCard.name; 
+  cardImage.src = newCard.link; 
+  cardImage.alt = newCard.name; 
+
+ 
+
+  deleteButton.addEventListener('click', function() { 
+
+    card.remove(); 
+
+  }); 
+  likeButton.addEventListener('click', function(evt) { 
+
+    likeButton.classList.toggle('like__button-active'); 
+
+  }); 
+  initialCardsContainer.prepend(card); 
+  closeCardPopup(); 
+} 
+
+createButton.addEventListener('click', addNewCard); 
