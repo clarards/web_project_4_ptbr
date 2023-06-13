@@ -53,7 +53,6 @@ initialCards.forEach(function(item) {
   const card = cardTemplate.querySelector('.card').cloneNode(true);
   const cardTitle = card.querySelector('.card__place');
   const cardImage = card.querySelector('.card__image');
-  const likeButton = card.querySelector('.like__button');
 
   cardTitle.textContent = item.name;
   cardImage.src = item.link;
@@ -115,8 +114,6 @@ function saveUserInfo(evt) {
 
 saveButton.addEventListener('click', saveUserInfo);
 
-
-
 function openCardPopup() {
   addCardPopup.classList.add('popup__container-card-active');
 }
@@ -128,45 +125,50 @@ function closeCardPopup() {
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
 
-
-function addNewCard(evt) { 
-  evt.preventDefault(); 
-  
-  const title = inputTitle.value; 
-  const url = inputLink.value; 
-
-  const newCard = {name: title, link: url 
-
-  }; 
-  
-  initialCards.push(newCard); 
-
-  const card = cardTemplate.querySelector('.card').cloneNode(true); 
+// Função para adicionar um novo local à página principal
+function createCard(title, url) {
+  const card = cardTemplate.querySelector('.card').cloneNode(true);
   const cardTitle = card.querySelector('.card__place');
-  const cardImage = card.querySelector('.card__image'); 
-  const likeButton = card.querySelector('.like__button'); 
-  const deleteButton = card.querySelector('.trash__icon'); 
+  const cardImage = card.querySelector('.card__image');
+  const deleteButton = card.querySelector('.trash__icon');
+  const likeButton = card.querySelector('.like__button');
 
- 
+  cardTitle.textContent = title;
+  cardImage.src = url;
+  cardImage.alt = "Imagem do local";
+  deleteButton.addEventListener('click', function() {
+    card.remove();
+  });
 
-  cardTitle.textContent = newCard.name; 
-  cardImage.src = newCard.link; 
-  cardImage.alt = newCard.name; 
+  likeButton.addEventListener('click', function() {
+    likeButton.classList.toggle('like__button-active');
+  });
 
- 
+  initialCardsContainer.prepend(card);
+}
 
-  deleteButton.addEventListener('click', function() { 
+// Evento de clique no botão "Criar"
+createButton.addEventListener("click", function(event) {
+  event.preventDefault();
 
-    card.remove(); 
+  const title = inputTitle.value;
+  const url = inputLink.value;
 
-  }); 
-  likeButton.addEventListener('click', function(evt) { 
+  createCard(title, url);
 
-    likeButton.classList.toggle('like__button-active'); 
+  // Limpar os campos do formulário
+  inputTitle.value = "";
+  inputLink.value = "";
 
-  }); 
-  initialCardsContainer.prepend(card); 
-  closeCardPopup(); 
-} 
+  closeCardPopup();
+});
+  // Limpar os campos do formulário
+  inputTitle.value = "";
+  inputLink.value = "";
 
-createButton.addEventListener('click', addNewCard); 
+
+// Evento de clique no botão "Criar"
+createButton.addEventListener("click", function(event) {
+  event.preventDefault();
+  adicionarLocal();
+});
