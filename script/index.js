@@ -125,7 +125,6 @@ function closeCardPopup() {
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
 
-// Função para adicionar um novo local à página principal
 function createCard(title, url) {
   const card = cardTemplate.querySelector('.card').cloneNode(true);
   const cardTitle = card.querySelector('.card__place');
@@ -147,7 +146,6 @@ function createCard(title, url) {
   initialCardsContainer.prepend(card);
 }
 
-// Evento de clique no botão "Criar"
 createButton.addEventListener("click", function(event) {
   event.preventDefault();
 
@@ -156,18 +154,15 @@ createButton.addEventListener("click", function(event) {
 
   createCard(title, url);
 
-  // Limpar os campos do formulário
   inputTitle.value = "";
   inputLink.value = "";
 
   closeCardPopup();
 });
-  // Limpar os campos do formulário
   inputTitle.value = "";
   inputLink.value = "";
 
 
-// Evento de clique no botão "Criar"
 createButton.addEventListener("click", function(event) {
   event.preventDefault();
   adicionarLocal();
