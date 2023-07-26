@@ -69,13 +69,14 @@ initialCardsContainer.addEventListener('click', function(evt) {
     }
   }
 });
+const likeButtons = initialCardsContainer.querySelectorAll('.like__button');
 
-initialCardsContainer.addEventListener('click', function(evt) {
-  if (evt.target.classList.contains('like__button')) {
-    const likeButton = evt.target;
+likeButtons.forEach(function(likeButton) {
+  likeButton.addEventListener('click', function() {
     likeButton.classList.toggle('like__button-active');
-  }
+  });
 });
+
 
 function openPopup() {
   userInfo.classList.add('popup__container-active');
