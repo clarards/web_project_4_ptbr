@@ -1,4 +1,3 @@
-// Buttons
 const editButton = document.querySelector('.edit-button');
 const closeButton = document.querySelector('.close-button');
 const closeButtonCard = document.querySelector('.close-button-card');
@@ -8,7 +7,6 @@ const saveButton = document.querySelector('.save-button');
 const createButton = document.querySelector('.save-button-card');
 const popupOverlay = document.querySelector('.popup__overlay');
 
-// Popups
 const popupUserInfo = document.querySelector('.info');
 const userInfo = document.querySelector('.popup__container');
 const addCardPopup = document.querySelector('.popup__container-card');
@@ -19,7 +17,6 @@ const userAbout = document.querySelector('.profile__about');
 const inputTitle = document.querySelector('.input-name-title');
 const inputLink = document.querySelector('.input-text-link');
 
-// Cards
 const cardTemplate = document.querySelector('#cards').content;
 const initialCardsContainer = document.querySelector('.initial-cards');
 const initialCards = [
@@ -58,17 +55,52 @@ initialCards.forEach(function(item) {
   cardImage.src = item.link;
   cardImage.alt = item.name;
 
+  cardImage.addEventListener('click', () => {
+    openModal(item);
+  });
+
   initialCardsContainer.appendChild(card);
 });
 
-initialCardsContainer.addEventListener('click', function(evt) {
-  if (evt.target.classList.contains('trash__icon')) {
+const openModal = (item) => {
+  const modal = document.getElementById('imageModal');
+  const expandedImage = modal.querySelector('.expanded-image');
+  const cardPlaceExpanded = modal.querySelector('.card-place-expanded');
+
+  expandedImage.src = item.link;
+  expandedImage.alt = item.name;
+  cardPlaceExpanded.textContent = item.name;
+
+  modal.style.display = 'block';
+
+  const closeButton = modal.querySelector('.close-button-img');
+  closeButton.addEventListener('click', () => {
+    closeModal();
+  });
+};
+
+const closeModal = () => {
+  const modal = document.getElementById('imageModal');
+  modal.style.display = 'none';
+};
+
+document.addEventListener('keydown', function(evt) {
+  if (evt.key === 'Escape') {
+    closeModal(); 
+  }
+});
+
+const trashIcons = initialCardsContainer.querySelectorAll('.trash__icon');
+
+trashIcons.forEach(function(trashIcon) {
+  trashIcon.addEventListener('click', function(evt) {
     const card = evt.target.closest('.card');
     if (card) {
       card.remove();
     }
-  }
+  });
 });
+
 const likeButtons = initialCardsContainer.querySelectorAll('.like__button');
 
 likeButtons.forEach(function(likeButton) {
@@ -76,7 +108,6 @@ likeButtons.forEach(function(likeButton) {
     likeButton.classList.toggle('like__button-active');
   });
 });
-
 
 function openPopup() {
   userInfo.classList.add('popup__container-active');
@@ -86,6 +117,12 @@ function closePopup() {
   userInfo.classList.remove('popup__container-active');
 }
 
+document.addEventListener('keydown', function(evt) {
+  if (evt.key === 'Escape') {
+    closePopup(); 
+  }
+});
+
 function closePopupThroughOverlay() {
   userInfo.classList.remove('popup__container-card-active');
 }
@@ -93,7 +130,6 @@ function closePopupThroughOverlay() {
 editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
 popupOverlay.addEventListener('click', closePopupThroughOverlay);
-
 
 function saveUserInfo(evt) {
   evt.preventDefault();
@@ -122,6 +158,12 @@ function openCardPopup() {
 function closeCardPopup() {
   addCardPopup.classList.remove('popup__container-card-active');
 }
+
+document.addEventListener('keydown', function(evt) {
+  if (evt.key === 'Escape') {
+    closeCardPopup(); 
+  }
+});
 
 addButton.addEventListener('click', openCardPopup);
 closeButtonCard.addEventListener('click', closeCardPopup);
@@ -160,11 +202,5 @@ createButton.addEventListener("click", function(event) {
 
   closeCardPopup();
 });
-  inputTitle.value = "";
-  inputLink.value = "";
 
 
-createButton.addEventListener("click", function(event) {
-  event.preventDefault();
-  adicionarLocal();
-});

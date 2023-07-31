@@ -1,6 +1,10 @@
 .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 4px;
-  }
-  
+  display: block;
+  color: red;
+  margin-top: 5px;
+}
+
+.error-message.show {
+  display: none;
+} 
+
