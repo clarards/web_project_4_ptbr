@@ -31,16 +31,16 @@
                 <button class="save-button save-button-user">Salvar</button>
             </form>
         
-            <form class="popup__container-card" name="form" novalidate>
+            <form class="popup__container popup__container-card" name="form" novalidate>
                 <div class="popup__container-active-card" novalidade>
                   <div class="popup__overlay"></div>
                 </div>
                 <img src="./images/close__icon.png" alt="botão de fechar" class="close-button close-button-card">
                 <h2 class="form-title">Novo local</h2>
                 <div class="info">
-                  <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="input-name input-name-title required" id="title-name" required>
+                  <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="popup__input input-name input-name-title required" id="title-name" required>
                   <span class="input-error-title error-message" id="title-error"></span>
-                  <input type="url" placeholder="Link da imagem" name="link" class="input-text input-text-link required" id="url-link" required>
+                  <input type="url" placeholder="Link da imagem" name="link" class="popup__input input-text input-text-link required" id="url-link" required>
                   <span class="input-error-about error-message" id="link-error"></span>
                 </div>
                 <button class="save-button save-button-card">Criar</button>
