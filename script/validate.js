@@ -4,7 +4,6 @@ const enableValidation = ({
   submitButton,
   inactiveButtonClass,
   inputErrorClass,
-  errorClass,
 }) => {
   const validateField = (input) => {
     const errorMessage = input.nextElementSibling;
@@ -64,7 +63,6 @@ enableValidation({
   submitButton: userSubmitButton,
   inactiveButtonClass: "save-button-disabled",
   inputErrorClass: "input-error",
-  errorClass: "error-message-visible",
 });
 
 const cardForm = document.querySelector("form[name='cardForm']");
@@ -77,5 +75,4 @@ enableValidation({
   submitButton: cardSubmitButton,
   inactiveButtonClass: "save-button-disabled",
   inputErrorClass: "input-error",
-  errorClass: "error-message-visible",
 });
