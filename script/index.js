@@ -131,14 +131,9 @@ editButton.addEventListener('click', openPopup);
 closeButton.addEventListener('click', closePopup);
 popupOverlay.addEventListener('click', closePopupThroughOverlay);
 
-function saveUserInfo(evt) {
-  evt.preventDefault();
 
-  const userInfoForm = document.forms[0];
-  if (!userInfoForm.checkValidity()) {
-    userInfoForm.reportValidity();
-    return;
-  }
+saveButton.addEventListener('click', function(evt) {
+  evt.preventDefault(); 
 
   const newName = inputName.value;
   const newAbout = inputAbout.value;
@@ -146,10 +141,8 @@ function saveUserInfo(evt) {
   userName.textContent = newName;
   userAbout.textContent = newAbout;
 
-  closePopup();
-}
-
-saveButton.addEventListener('click', saveUserInfo);
+closePopup()
+});
 
 function openCardPopup() {
   addCardPopup.classList.add('popup__container-card-active');
@@ -157,7 +150,10 @@ function openCardPopup() {
 
 function closeCardPopup() {
   addCardPopup.classList.remove('popup__container-card-active');
+  createButton.setAttribute("disabled", true);
+  createButton.classList.add("save-button-disabled");
 }
+
 
 document.addEventListener('keydown', function(evt) {
   if (evt.key === 'Escape') {
@@ -201,6 +197,5 @@ createButton.addEventListener("click", function(event) {
   inputLink.value = "";
 
   closeCardPopup();
+
 });
-
-

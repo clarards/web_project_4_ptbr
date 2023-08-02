@@ -54,7 +54,6 @@ const enableValidation = ({
   });
 };
 
-// Para o primeiro formulário (Editar perfil)
 const userForm = document.querySelector("form[name='userForm']");
 const userInputs = userForm.querySelectorAll(".popup__input");
 const userSubmitButton = userForm.querySelector(".save-button-user");
@@ -68,7 +67,6 @@ enableValidation({
   errorClass: "error-message-visible",
 });
 
-// Para o segundo formulário (Novo local)
 const cardForm = document.querySelector("form[name='cardForm']");
 const cardInputs = cardForm.querySelectorAll(".popup__input");
 const cardSubmitButton = cardForm.querySelector(".save-button-card");
