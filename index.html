@@ -15,31 +15,30 @@
     
     <main>
         <section class="popup">
-            <form class="popup__container" name="form" novalidate>
+            <form class="popup__container" name="userForm" novalidate>
                 <div class="popup__container-active">
-                    <div class="popup__overlay"></div>
+                  <div class="popup__overlay"></div>
                 </div>
                 <img src="./images/close__icon.png" alt="Botão de fechar" class="close-button">
-        
                 <h2 class="form-title">Editar perfil</h2>
                 <div class="info">
-                    <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" name="name" class="popup__input input-name required" id="input-name" required>
-                    <span class="input-error input-error-title error-message" id="name-error"></span>
-                    <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" name="description" class="popup__input input-text required" id="input-about" required>
-                    <span class="input-error input-error-about error-message" id="description-error"></span>
+                  <input type="text" placeholder="Seu nome" minlength="2" maxlength="40" name="name" class="popup__input input-name required" id="user-name" required>
+                  <span class="input-error input-error-title error-message" id="user-name-error"></span>
+                  <input type="text" placeholder="Sobre mim" minlength="2" maxlength="200" name="description" class="popup__input input-text required" id="input-about" required>
+                  <span class="input-error input-error-about error-message" id="description-error"></span>
                 </div>
                 <button class="save-button save-button-user">Salvar</button>
-            </form>
-        
-            <form class="popup__container popup__container-card" name="form" novalidate>
-                <div class="popup__container-active-card" novalidade>
+              </form>
+            
+              <form class="popup__container popup__container-card" name="cardForm" novalidate>
+                <div class="popup__container-active-card">
                   <div class="popup__overlay"></div>
                 </div>
                 <img src="./images/close__icon.png" alt="botão de fechar" class="close-button close-button-card">
                 <h2 class="form-title">Novo local</h2>
                 <div class="info">
-                  <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="popup__input input-name input-name-title required" id="title-name" required>
-                  <span class="input-error-title error-message" id="title-error"></span>
+                  <input type="text" placeholder="Título" minlength="2" maxlength="30" name="place" class="popup__input input-name input-name-title required" id="card-title-name" required>
+                  <span class="input-error-title error-message" id="card-title-error"></span>
                   <input type="url" placeholder="Link da imagem" name="link" class="popup__input input-text input-text-link required" id="url-link" required>
                   <span class="input-error-about error-message" id="link-error"></span>
                 </div>

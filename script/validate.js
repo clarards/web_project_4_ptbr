@@ -54,18 +54,30 @@ const enableValidation = ({
   });
 };
 
-const form = document.querySelector(".popup__container");
-const inputs = form.querySelectorAll(".popup__input");
-const submitButton = document.querySelector(".save-button");
+// Para o primeiro formulário (Editar perfil)
+const userForm = document.querySelector("form[name='userForm']");
+const userInputs = userForm.querySelectorAll(".popup__input");
+const userSubmitButton = userForm.querySelector(".save-button-user");
 
 enableValidation({
-  form,
-  inputs,
-  submitButton,
+  form: userForm,
+  inputs: userInputs,
+  submitButton: userSubmitButton,
   inactiveButtonClass: "save-button-disabled",
   inputErrorClass: "input-error",
   errorClass: "error-message-visible",
 });
 
+// Para o segundo formulário (Novo local)
+const cardForm = document.querySelector("form[name='cardForm']");
+const cardInputs = cardForm.querySelectorAll(".popup__input");
+const cardSubmitButton = cardForm.querySelector(".save-button-card");
 
-
+enableValidation({
+  form: cardForm,
+  inputs: cardInputs,
+  submitButton: cardSubmitButton,
+  inactiveButtonClass: "save-button-disabled",
+  inputErrorClass: "input-error",
+  errorClass: "error-message-visible",
+});
