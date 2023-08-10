@@ -9,4 +9,7 @@
 
 **Sobre o projeto**
 
-Esse projeto é uma página de rede social para publicação de fotos. A página tem função de adicionar nome de usuário, uma descrição sobre ele e adicionar novos cards. Também foi criada uma função para validar o formulário onde o usuário só consegue salvar caso cumpra as requisições pedidas.
+Esse projeto é uma página de rede social para publicação de fotos. A página tem função de adicionar nome de usuário junto com uma descrição sobre ele além de poder adicionar novas fotos no perfil. Também foi criada uma função para validar o formulário onde o usuário só consegue salvar caso cumpra as requisições pedidas.
+
+**Tecnologias utilizadas para a criação do projeto:** HTML, CSS e JavaScript.
+
