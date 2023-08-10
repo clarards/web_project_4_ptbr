@@ -4,6 +4,8 @@
 
 * [Link para o projeto no Figma](https://www.figma.com/file/UEBC9WrjCqc74O4zfGn8ed/Web_Brief_Sprint_5_PT-%7C-Ao-redor-dos-E.U.A-%7C-desktop-%2B-mobile?type=design&node-id=1-2&t=5fAsrnFl6gO3hYF6-0)
 
+**Página no github pages**
+
 * [Link para a página](https://clarards.github.io/web_project_4_ptbr/)
 
 
