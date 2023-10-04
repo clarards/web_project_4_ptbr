@@ -129,5 +129,5 @@ createButton.addEventListener("click", function(event) {
 
 
 
-import Card from './card.js'; 
+import Card from 'Card.js'; 
 import FormValidator from './FormValidator.js'
