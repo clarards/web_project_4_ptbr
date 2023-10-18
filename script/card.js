@@ -1,4 +1,4 @@
-class Card {
+export class Card {
     constructor(text, imageUrl, templateSelector) {
       this._text = text;
       this._imageUrl = imageUrl;
@@ -50,4 +50,3 @@ class Card {
   }
   
 
-    export class Card {}

@@ -1,3 +1,6 @@
+import { FormValidator } from "./FormValidator.js";
+
+
 const cardTemplate = document.querySelector('#cards').content;
 const initialCardsContainer = document.querySelector('.initial-cards');
 const initialCards = [
@@ -91,7 +94,3 @@ likeButtons.forEach(function(likeButton) {
 });
 
 
-
-import { Card } from "./Card.js"; 
-
-import FormValidator from "./FormValidator.js";
