@@ -69,6 +69,41 @@ function openPopup() {
     }
   });
   
-  addButton.addEventListener('click', openCardPopup);
-  closeButtonCard.addEventListener('click', closeCardPopup);
+  
+  function createCard(title, url) {
+    const card = cardTemplate.querySelector('.card').cloneNode(true);
+    const cardTitle = card.querySelector('.card__place');
+    const cardImage = card.querySelector('.card__image');
+    const deleteButton = card.querySelector('.trash__icon');
+    const likeButton = card.querySelector('.like__button');
+  
+    cardTitle.textContent = title;
+    cardImage.src = url;
+    cardImage.alt = "Imagem do local";
+    deleteButton.addEventListener('click', function() {
+      card.remove();
+    });
+  
+    likeButton.addEventListener('click', function() {
+      likeButton.classList.toggle('like__button-active');
+    });
+  
+    initialCardsContainer.prepend(card);
+  }
+  
+  createButton.addEventListener("click", function(event) {
+    event.preventDefault();
+  
+    const title = inputTitle.value;
+    const url = inputLink.value;
+  
+    createCard(title, url);
+  
+    inputTitle.value = "";
+    inputLink.value = "";
+  
+    closeCardPopup();
+  
+  });
+  
   
