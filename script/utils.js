@@ -107,4 +107,8 @@ function openPopup() {
   
   });
   
-  
+  document.addEventListener('keydown', function(evt) {
+    if (evt.key === 'Enter') {
+      createCard(); 
+    }
+  });
