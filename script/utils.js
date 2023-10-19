@@ -69,6 +69,7 @@ function openPopup() {
     }
   });
   
+  addButton.addEventListener('click', openCardPopup)
   
   function createCard(title, url) {
     const card = cardTemplate.querySelector('.card').cloneNode(true);
