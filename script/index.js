@@ -1,5 +1,30 @@
 import Card from "./Card.js";
+
 import { FormValidator } from "./FormValidator.js";
+const userForm = document.querySelector("form[name='userForm']");
+const userInputs = userForm.querySelectorAll(".popup__input");
+const userSubmitButton = userForm.querySelector(".save-button-user");
+
+const cardForm = document.querySelector("form[name='cardForm']");
+const cardInputs = cardForm.querySelectorAll(".popup__input");
+const cardSubmitButton = cardForm.querySelector(".save-button-card");
+
+new FormValidator(
+  userForm,
+  userInputs,
+  userSubmitButton,
+  "save-button-disabled",
+  "input-error"
+);
+
+new FormValidator(
+  cardForm,
+  cardInputs,
+  cardSubmitButton,
+  "save-button-disabled",
+  "input-error"
+);
+
 
 
 const cardTemplate = document.querySelector('#cards').content;
@@ -93,5 +118,4 @@ likeButtons.forEach(function(likeButton) {
     likeButton.classList.toggle('like__button-active');
   });
 });
-
 
