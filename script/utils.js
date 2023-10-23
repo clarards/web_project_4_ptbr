@@ -38,7 +38,7 @@ function openPopup() {
   editButton.addEventListener('click', openPopup);
   closeButton.addEventListener('click', closePopup);
   popupOverlay.addEventListener('click', closePopupThroughOverlay);
-  
+
   
   saveButton.addEventListener('click', function(evt) {
     evt.preventDefault(); 
@@ -62,7 +62,8 @@ function openPopup() {
     createButton.classList.add("save-button-disabled");
   }
   
-  
+  closeButtonCard.addEventListener('click', closeCardPopup);
+
   document.addEventListener('keydown', function(evt) {
     if (evt.key === 'Escape') {
       closeCardPopup(); 
