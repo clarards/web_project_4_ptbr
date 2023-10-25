@@ -1,5 +1,3 @@
-import Card from "./Card.js";
-
 import { FormValidator } from "./FormValidator.js";
 const userForm = document.querySelector("form[name='userForm']");
 const userInputs = userForm.querySelectorAll(".popup__input");

@@ -1,3 +1,6 @@
+import { Card } from "./Card.js";
+const cardInstance = new Card(text, imageUrl, templateSelector);
+
 const popupUserInfo = document.querySelector('.info');
 const userInfo = document.querySelector('.popup__container');
 const addCardPopup = document.querySelector('.popup__container-card');
@@ -99,17 +102,13 @@ function openPopup() {
     const title = inputTitle.value;
     const url = inputLink.value;
   
-    createCard(title, url);
+    const cardInstance = new Card(text, imageUrl, templateSelector);
+    const cardElement = cardInstance.generateCard();
+  
+    initialCardsContainer.prepend(cardElement);
   
     inputTitle.value = "";
     inputLink.value = "";
   
     closeCardPopup();
-  
-  });
-  
-  document.addEventListener('keydown', function(evt) {
-    if (evt.key === 'Enter') {
-      createCard(); 
-    }
   });
