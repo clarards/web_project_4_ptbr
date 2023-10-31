@@ -1,6 +1,3 @@
-import { Card } from "./Card.js";
-const cardInstance = new Card(text, imageUrl, templateSelector);
-
 const popupUserInfo = document.querySelector('.info');
 const userInfo = document.querySelector('.popup__container');
 const addCardPopup = document.querySelector('.popup__container-card');
@@ -75,40 +72,4 @@ function openPopup() {
   
   addButton.addEventListener('click', openCardPopup)
   
-  function createCard(title, url) {
-    const card = cardTemplate.querySelector('.card').cloneNode(true);
-    const cardTitle = card.querySelector('.card__place');
-    const cardImage = card.querySelector('.card__image');
-    const deleteButton = card.querySelector('.trash__icon');
-    const likeButton = card.querySelector('.like__button');
   
-    cardTitle.textContent = title;
-    cardImage.src = url;
-    cardImage.alt = "Imagem do local";
-    deleteButton.addEventListener('click', function() {
-      card.remove();
-    });
-  
-    likeButton.addEventListener('click', function() {
-      likeButton.classList.toggle('like__button-active');
-    });
-  
-    initialCardsContainer.prepend(card);
-  }
-  
-  createButton.addEventListener("click", function(event) {
-    event.preventDefault();
-  
-    const title = inputTitle.value;
-    const url = inputLink.value;
-  
-    const cardInstance = new Card(text, imageUrl, templateSelector);
-    const cardElement = cardInstance.generateCard();
-  
-    initialCardsContainer.prepend(cardElement);
-  
-    inputTitle.value = "";
-    inputLink.value = "";
-  
-    closeCardPopup();
-  });

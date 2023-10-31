@@ -117,3 +117,39 @@ likeButtons.forEach(function(likeButton) {
   });
 });
 
+
+
+cardForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const title = cardInputs[0].value; 
+  const url = cardInputs[1].value; 
+
+  if (title && url) {
+    createCard(title, url); 
+    cardForm.reset(); 
+  }
+});
+
+function createCard(title, url) {
+  const cardTemplate = document.querySelector('#cards').content;
+  const card = cardTemplate.querySelector('.card').cloneNode(true);
+  const cardTitle = card.querySelector('.card__place');
+  const cardImage = card.querySelector('.card__image');
+
+  cardTitle.textContent = title;
+  cardImage.src = url;
+  cardImage.alt = "Imagem do local";
+
+
+  initialCardsContainer.insertBefore(card, initialCardsContainer.firstChild);
+
+  closeCardPopup()
+}
+
+
+
+
+import  Card  from "./Card.js";
+const cardInstance = new Card(text, imageUrl, templateSelector);
+
